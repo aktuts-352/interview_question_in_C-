@@ -1,0 +1,41 @@
+//Program to find the duplicate value in the array if it contains multiple value
+
+#include<iostream>
+
+using namespace std;
+
+int main(){
+    int sizeofArr;
+    cout<<"Enter the size of the array "<<endl;
+    cin>>sizeofArr;
+    
+    int arr[sizeofArr];
+    for(int i = 0; i < sizeofArr; i++){
+        
+        cin>>arr[i];
+    }
+    cout<<"Before remove duplicate ";
+    for(int i = 0; i < sizeofArr; i++){
+        cout<<arr[i]<<" ";
+    }
+    cout<<endl;
+    for(int i = 0; i < sizeofArr; i++){
+        for(int j = i + 1; j < sizeofArr;){
+            if(arr[i] == arr[j]){
+                for(int k = j; k < sizeofArr -1; k++){
+                    arr[k] = arr[k+1];
+                }
+                sizeofArr--;
+            }
+            else{
+                j++;
+            }
+        }
+    }
+    cout<<"After remove duplicate ";
+    for(int i = 0 ; i < sizeofArr; i++){
+        cout<<arr[i]<<" ";
+        
+    }
+    return 0;
+}
