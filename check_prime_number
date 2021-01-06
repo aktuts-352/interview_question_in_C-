@@ -1,0 +1,39 @@
+//Program to check the number is prime or not?
+
+#include<iostream>
+
+using namespace std;
+
+void checkPrime(int n){
+    int div = 2;
+    bool isPrime = true;
+    if(n == 0 || n == 1){
+        isPrime = false;
+    }
+    else{
+        while(div < n){
+            if(n % div == 0){
+                isPrime = false;
+                break;
+            }
+            else{
+                div++;
+            }
+        }
+    }
+    if(isPrime){
+        cout<<"Number is prime";
+    }
+    else{
+        cout<<"Number is not prime";
+    }
+}
+
+int main(){
+    cout<<"Enter a number to check is this number prime or not ";
+    int num;
+    cin>>num;
+    checkPrime(num);
+    
+    return 0;
+}
