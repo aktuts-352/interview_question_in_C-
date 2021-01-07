@@ -1,0 +1,42 @@
+// Program to check the given two string is anagram or not_eq
+
+#include<bits/stdc++.h>
+#include<string.h>
+using namespace std;
+
+void checkAnagram(string string1, string string2){
+    int n1 = string1.length();
+    int n2 = string2.length();
+    bool result = true;
+    
+    if(n1 != n2){
+        result = false;
+    }
+    
+    sort(string1.begin(), string1.end());
+    sort(string2.begin(), string2.end());
+    
+    for(int i = 0; i < n1; i++){
+        if(string1[i] != string2[i]){
+            result = false;
+        }
+    }
+
+    if(result){
+        cout<<"Two strings are anagram of each other";
+    }else{
+        cout<<"Two strings are not anagram of each other";
+    }
+}
+
+int main(){
+    string string1;
+    cout<<"Enter the value of 1st string ";
+    cin>>string1;
+    string string2;
+    cout<<"Enter the value of the 2nd string ";
+    cin>>string2;
+    
+    checkAnagram(string1, string2);
+    return 0;
+}
