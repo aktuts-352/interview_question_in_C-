@@ -1,0 +1,34 @@
+//Program to find the reverse of a given integer array.
+
+#include<iostream>
+using namespace std;
+
+void reverseArray(int arr[], int n){
+    for(int i = 0; i < n; i++){
+        int temp = arr[i];
+        arr[i] = arr[n-1];
+        arr[n-1] = temp;
+        n--;
+    }
+}
+
+void printReverse(int arr[], int n){
+    for(int i = 0; i < n; i++){
+        cout<<arr[i]<<" ";
+    }
+}
+int main(){
+    int n; 
+    cout<<"Enter the size of the array ";
+    cin>>n;
+    int arr[n];
+    
+    cout<<"Enter the value of the array ";
+    for(int i = 0; i < n; i++){
+        cin>>arr[i];
+    }
+    reverseArray(arr, n);
+    printReverse(arr, n);
+    
+    return 0;
+}
