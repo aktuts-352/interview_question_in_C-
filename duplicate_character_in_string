@@ -1,0 +1,24 @@
+//Program to find the duplicate character in string
+
+#include<iostream>
+#include<string.h>
+using namespace std;
+
+void findDuplicate(char name[]){
+    
+    for(int i =0; i < strlen(name); i++){
+        for(int j = i + 1; j < strlen(name); j++){
+            if(name[i] == name[j]){
+                cout<<name[i];
+            }
+        }
+    }
+}
+int main(){
+    char name[100];
+    cout<<"Enter a string value ";
+    cin.getline(name, 100);
+    
+    findDuplicate(name);
+    return 0;
+}
