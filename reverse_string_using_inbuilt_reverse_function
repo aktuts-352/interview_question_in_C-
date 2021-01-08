@@ -1,0 +1,13 @@
+//Program to reverse a given string by using inbuilt reverse function
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main(){
+    string str = "abcdefgh";
+    reverse(str.begin(), str.end());
+    
+    cout<<str;
+    
+    return 0;
+}
