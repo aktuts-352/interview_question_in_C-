@@ -1,0 +1,24 @@
+// Program to find the factorial of a number using recursion
+
+#include<bits/stdc++.h>
+using namespace std;
+int findFactorial(int n){
+    if(n < 0){
+        return -1;
+    }
+    if(n == 0){
+        return 1;
+    }else{
+        return (n * findFactorial(n-1));
+    }
+}
+
+int main(){
+    int value;
+    cout<<"Enter a number to find the factorial of that number ";
+    cin>>value;
+    
+    int fact = findFactorial(value);
+    cout<<fact;
+    return 0;
+}
