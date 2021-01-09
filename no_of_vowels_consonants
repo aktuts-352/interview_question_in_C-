@@ -1,0 +1,30 @@
+// Program to count the no of vowels and consonants in a given string.
+
+#include<bits/stdc++.h>
+using namespace std;
+
+void no_of_vowel_consonants(string str){
+    int n = str.length();
+    int no_of_vowels, no_of_consonants;
+    no_of_vowels = 0;
+    no_of_consonants = 0;
+    for(int i = 0; i < n; i++){
+        if(str[i] == 'a' || str[i] == 'e' || str[i] == 'i' ||
+           str[i] == 'o' || str[i] == 'u'|| str[i] == 'A' ||
+           str[i] =='E' || str[i] == 'I' || str[i] == 'O' ||
+           str[i] == 'U'){
+               no_of_vowels++;
+           }else{
+               no_of_consonants++;
+           }
+    }
+    cout<<"Vowels "<<no_of_vowels<<endl;
+    cout<<"consonants "<<no_of_consonants;
+}
+int main(){
+    string str;
+    cout<<"Enter the string to find the no of vowels and consonants present ";
+    cin>>str;
+    no_of_vowel_consonants(str);
+    return 0;
+}
