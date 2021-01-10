@@ -1,0 +1,28 @@
+// Program to find the all permutation of a string
+
+#include<bits/stdc++.h>
+using namespace std;
+void permute(string str, int start_index, int end_index){
+    
+    if(start_index == end_index){
+        cout<<str<<endl;
+        return;
+    }
+    
+    for(int i = start_index; i <= end_index; i++){
+        swap(str[start_index], str[i]);
+        permute(str, start_index+1,end_index);
+        swap(str[start_index], str[i]);
+    }
+}
+int main(){
+    string str;
+    cout<<"Enter the value of the string ";
+    cin>>str;
+    int n = str.length();
+    int start_index = 0;
+    int end_index = n - 1;
+    permute(str, start_index, end_index);
+    
+    return 0;
+}
