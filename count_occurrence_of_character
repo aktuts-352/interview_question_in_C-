@@ -1,0 +1,26 @@
+//Program to count the occurance of a given character in a string
+
+#include<bits/stdc++.h>
+using namespace std;
+
+void cout_of_occurrence(string str, char char_value){
+    int n = str.length();
+    int count = 0;
+    for(int i = 0; i < n; i++){
+        if(str[i] == char_value){
+            count++;
+        }
+    }
+    cout<<char_value<<" occurrence "<<count<<" times";
+}
+int main(){
+    string str;
+    cout<<"Enter the value of string ";
+    cin>>str;
+    char char_value;
+    cout<<"Enter the value of the character ";
+    cin>>char_value;
+    
+    cout_of_occurrence(str, char_value);
+    return 0;
+}
