@@ -1,0 +1,40 @@
+// Program to check if two strings are rotation of each other
+
+#include<bits/stdc++.h>
+using namespace std;
+
+void checkRotation(string str1, string str2){
+    string temp;
+    int n1 = str1.length();
+    int n2 = str2.length();
+    bool res;
+    
+    if(n1 != n2){
+        bool res = false;
+    }
+    
+    temp = str1 + str1;
+    if(temp.find(str2) != string::npos){
+        res = true;
+    }else{
+        res = false;
+    }
+    if(res){
+        cout<<"These are Rotation of each other ";
+    }else{
+        cout<<"These are Not Rotation of each other";
+    }
+}
+
+int main(){
+    string str1, str2;
+    cout<<"Enter the value of the first string "<<endl;
+    cin>>str1;
+    cout<<"Enter the value of the second string "<<endl;
+    cin>>str2;
+    
+    checkRotation(str1, str2);
+    
+    return 0;
+    
+}
