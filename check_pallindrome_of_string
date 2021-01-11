@@ -1,0 +1,39 @@
+// Program to check if given string is pallindrome or not.
+
+#include<bits/stdc++.h>
+using namespace std;
+
+void
+checkPallindrome (string str)
+{
+  int n = str.length ();
+  bool result = true;
+
+  for (int i = 0; i < n; i++)
+    {
+      if (str[i] != str[n - 1 - i])
+	{
+	  result = false;
+	  break;
+	}
+    }
+  if (result)
+    {
+      cout << "This is pallindrome";
+    }
+  else
+    {
+      cout << "This is not pallindrome";
+    }
+}
+
+int
+main ()
+{
+  string str;
+  cout << "Enter the value of the string ";
+  cin >> str;
+
+  checkPallindrome (str);
+  return 0;
+}
