@@ -1,0 +1,20 @@
+// Program to print the rectangle pattern
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main(){
+    int rows, cols;
+    cout<<"Enter the value of the rows ";
+    cin>>rows;
+    cout<<"Enter the the value of the columns ";
+    cin>>cols;
+    
+    for(int i = 0; i < rows; i++){
+        for(int j = 0; j < cols; j++){
+            cout<<"* ";
+        }
+        cout<<endl;
+    }
+    return 0;
+}
