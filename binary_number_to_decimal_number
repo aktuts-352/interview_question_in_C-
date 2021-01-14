@@ -1,0 +1,32 @@
+// Program to print Binary number into decimal number
+
+#include<bits/stdc++.h>
+using namespace std;
+
+void
+binaryToD (int arr[], int sizeofarr)
+{
+  int num = 0;
+
+  for (int i = 0; i < sizeofarr; i++)
+    {
+      num = num + arr[sizeofarr - i - 1] * pow (2, i);
+    }
+  cout <<"Decimal number of the given binary number is "<< num;
+}
+
+int
+main ()
+{
+  int sizeofarr;
+  cout<<"Enter the size of the binary number as you want ";
+  cin >> sizeofarr;
+  int arr[sizeofarr];
+  cout<<"Enter the binary number as per given your size ";
+  for (int i = 0; i < sizeofarr; i++)
+    {
+      cin >> arr[i];
+    }
+  binaryToD (arr, sizeofarr);
+  return 0;
+}
