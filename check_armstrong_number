@@ -1,0 +1,28 @@
+// Program to check the Armstrong number
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int
+main ()
+{
+  int n;
+  cin >> n;
+  int sum = 0;
+  int originalNum = n;
+  while (n > 0)
+    {
+      int rem = n % 10;
+      sum = sum + pow (rem, 3);
+      n = n / 10;
+    }
+  if (sum == originalNum)
+    {
+      cout << "Number is Armstrong";
+    }
+  else
+    {
+      cout << "Number is not a Armstrong";
+    }
+  return 0;
+}
