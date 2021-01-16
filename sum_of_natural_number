@@ -1,0 +1,23 @@
+// Program to calculate the sum of n natural number
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int
+sum_Of_natural_number (int n)
+{
+  int sum = n * (n + 1) / 2;
+  return sum;
+}
+
+int
+main ()
+{
+
+  int n;
+  cin >> n;
+  int sum = sum_Of_natural_number (n);
+  cout << "Sum of " << n << " natural number is " << sum;
+  return 0;
+}
+
