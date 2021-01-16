@@ -1,0 +1,60 @@
+// Program to check the pythagorian triplet
+
+#include<bits/stdc++.h>
+using namespace std;
+
+bool
+check_pythagorian_triplet (int x, int y, int z)
+{
+  int a, b, c;
+  bool res;
+  a = max (x, max (y, z));
+  if (a == x)
+    {
+      b = y;
+      c = z;
+    }
+  else if (a == y)
+    {
+      b = x;
+      c = z;
+    }
+  else if (a == z)
+    {
+      b = x;
+      c = y;
+    }
+  else
+    {
+      b = x;
+      c = y;
+    }
+  if (a * a == b * b + c * c)
+    {
+      res = true;
+    }
+  else
+    {
+      res = false;
+    }
+
+  return res;
+}
+
+int
+main ()
+{
+  int x, y, z;
+  cin >> x >> y >> z;
+
+  if (check_pythagorian_triplet (x, y, z))
+    {
+      cout << x << ", " << y << " and " << z << " are pythagorian triplet";
+    }
+  else
+    {
+      cout << x << ", " << y << " and " << z <<
+	" are not pythagorian triplet";
+    }
+  return 0;
+}
