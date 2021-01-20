@@ -1,0 +1,36 @@
+// Program to find the length of the longest Arithmetic subarray in a given array
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int findLongestArithmetic_subarray(int arr[], int n){
+	int ans = 2;
+	int prev_diff = arr[1] - arr[0];
+	int current = 2;
+	int j = 2;
+	
+	while(j < n){
+		
+		if(prev_diff == arr[j] - arr[j-1]){
+			current++;
+		}else{
+			prev_diff = arr[j] - arr[j-1];
+			current  = 2;
+		}
+		ans = max(ans, current);
+		j++;
+	}
+	return ans;
+}
+
+int main(){
+	int n;
+	cin>> n;
+	
+	int arr[n];
+	for(int i = 0; i < n; i++){
+		cin>>arr[i];
+	}
+	cout<<findLongestArithmetic_subarray(arr, n);
+	return 0;
+}
