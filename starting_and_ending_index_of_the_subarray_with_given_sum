@@ -1,0 +1,52 @@
+// Program to print the starting index and ending index of the subarray with given sum.
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int
+main ()
+{
+  int n;
+  cin >> n;
+  int arr[n];
+  for (int i = 0; i < n; i++)
+    {
+      cin >> arr[i];
+    }
+  int sum;
+  cin >> sum;
+
+  int i = 0, j = 0, st = -1, en = -1, currSum = 0;
+
+  while (j < n && currSum + arr[j] <= sum)
+    {
+      currSum = currSum + arr[j];
+      j++;
+    }
+
+  if (currSum == sum)
+    {
+      cout << i + 1 << " " << j << endl;
+      return 0;
+    }
+
+  while (j < n)
+    {
+      currSum += arr[j];
+      while (currSum > sum)
+	{
+	  currSum -= arr[i];
+	  i++;
+	}
+      if (currSum == sum)
+	{
+	  st = i + 1;
+	  en = j + 1;
+	  break;
+	}
+      j++;
+    }
+
+  cout << st << " " << en;
+  return 0;
+}
