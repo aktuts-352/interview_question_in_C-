@@ -1,0 +1,42 @@
+// Program to check if there given value exists or not in a input matrxi.
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int
+main ()
+{
+
+  int n, m, k;
+  cin >> n >> m >> k;
+  int a[n][m];
+  for (int i = 0; i < n; i++)
+    {
+      for (int j = 0; j < m; j++)
+	{
+	  cin >> a[i][j];
+	}
+    }
+
+  bool flag = false;
+  for (int i = 0; i < n; i++)
+    {
+      for (int j = 0; j < m; j++)
+	{
+	  if (a[i][j] == k)
+	    {
+	      cout << i << " " << j;
+	      flag = true;
+	    }
+	}
+    }
+  if (flag)
+    {
+      cout << "Element Found! " << endl;
+    }
+  else
+    {
+      cout << "Element doesn't Found !" << endl;
+    }
+  return 0;
+}
